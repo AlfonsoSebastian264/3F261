@@ -1,0 +1,10 @@
+@startuml
+Class Jugador
+Class Bala
+Class Enemigo
+Class Arma
+class BalaEnemiga
+
+BalaEnemiga --|> Bala
+
+@enduml
