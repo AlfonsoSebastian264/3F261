@@ -1,10 +1,81 @@
 @startuml
 Class Jugador
+Class Bill
+Class Lance
+
 Class Bala
-Class Enemigo
-Class Arma
 class BalaEnemiga
+class Granada
+class BalaJugador
+class Cohete
+class Laser
+class MisilPerseguidor
+
+class Pickup
+class NavePickup
+
+Class Nuke
+Class escudo
+Class PickupArma
+
+Class Enemigo
+class "Perro"
+class SoldadoAzul
+class SoldadoRojo
+class LanzaGranadas
+class Sniper
+Class Torreta
+class Barrera
+class TorretaBarrera
+class PuntoDebilBarrera
+
+Class Arma
+class Ametralladora
+class Spread
+Class PistolaLaser
+Class Chaser
+Class LanzaCohetes
 
 BalaEnemiga --|> Bala
+BalaJugador --|> Bala
+Cohete --|> BalaJugador
+Laser --|> BalaJugador
+MisilPerseguidor --|> BalaJugador
+
+Bill --|> Jugador
+Lance --|> Jugador
+Jugador 0-- Arma
+Arma 0-- BalaJugador
+
+Ametralladora --|> Arma
+Spread --|> Arma
+PistolaLaser --|> Arma
+Chaser --|> Arma
+LanzaCohetes--|> Arma
+
+Ametralladora 0-- BalaJugador
+Spread 0-- BalaJugador
+PistolaLaser 0-- Laser
+Chaser 0-- MisilPerseguidor
+LanzaCohetes 0-- Cohete
+
+Perro --|> Enemigo
+SoldadoAzul --|> Enemigo
+SoldadoRojo --|> Enemigo
+LanzaGranadas --|> Enemigo
+Sniper --|> Enemigo
+Torreta --|> Enemigo
+Barrera --|> Enemigo
+Barrera *-- TorretaBarrera
+Barrera *-- PuntoDebilBarrera
+
+Granada --|> BalaEnemiga
+
+Nuke --|> Pickup
+Escudo --|> Pickup
+PickupArma --|> Pickup
+NavePickup 0-- Pickup
+PickupArma 0-- Arma
+
 
 @enduml
