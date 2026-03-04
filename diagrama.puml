@@ -15,7 +15,7 @@ class Pickup
 class NavePickup
 
 Class Nuke
-Class escudo
+Class Escudo
 Class PickupArma
 
 Class Enemigo
@@ -53,11 +53,11 @@ PistolaLaser --|> Arma
 Chaser --|> Arma
 LanzaCohetes--|> Arma
 
-Ametralladora 0-- BalaJugador
-Spread 0-- BalaJugador
-PistolaLaser 0-- Laser
-Chaser 0-- MisilPerseguidor
-LanzaCohetes 0-- Cohete
+Ametralladora 0-- "*" BalaJugador
+Spread 0-- "*" BalaJugador
+PistolaLaser 0-- "*" Laser
+Chaser 0-- "*" MisilPerseguidor
+LanzaCohetes 0-- "*" Cohete
 
 Perro --|> Enemigo
 SoldadoAzul --|> Enemigo
@@ -66,7 +66,7 @@ LanzaGranadas --|> Enemigo
 Sniper --|> Enemigo
 Torreta --|> Enemigo
 Barrera --|> Enemigo
-Barrera *-- TorretaBarrera
+Barrera *-- "2" TorretaBarrera
 Barrera *-- PuntoDebilBarrera
 
 Granada --|> BalaEnemiga
