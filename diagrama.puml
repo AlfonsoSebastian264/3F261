@@ -1,11 +1,15 @@
 @startuml
-Class Jugador
+Class Jugador{
+- Vidas vidas
++ Disparar()
++ Morir()
+}
 Class Bill
 Class Lance
 
 Class Bala
 class BalaEnemiga
-class Granada
+class Granada  
 class BalaJugador
 class Cohete
 class Laser
@@ -18,7 +22,9 @@ Class Nuke
 Class Escudo
 Class PickupArma
 
-Class Enemigo
+Class Enemigo{
++ Morir()
+}
 class "Perro"
 class SoldadoAzul
 class SoldadoRojo
@@ -46,6 +52,7 @@ Bill --|> Jugador
 Lance --|> Jugador
 Jugador 0-- Arma
 Arma 0-- BalaJugador
+Balajugador "*" 0-- "*" Enemigo
 
 Ametralladora --|> Arma
 Spread --|> Arma
